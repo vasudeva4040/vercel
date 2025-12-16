@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Join Meeting</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-      background-color: #f0f0f0;
-    }
-    a.button-link {
-      display: inline-block;
-      padding: 15px 25px;
-      font-size: 18px;
-      color: #fff;
-      background-color: #007bff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    a.button-link:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <h1>Welcome to the Meeting Page</h1>
-  <p>Click the button below to join the meeting:</p>
-  <a href="https://meet.jit.si/xbdsmx" target="_blank" class="button-link">Join the Meeting</a>
-</body>
-</html>
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  async redirects() {
+    return [
+      // exact one link
+      {
+        source: "/xgrpcamx",
+        destination: "https://www.whereby.com/xgrpcamx",
+        permanent: false, // 307/308 style (safe)
+      },
+
+      // OPTIONAL: make any /<room> redirect to whereby.com/<room>
+      // { source: "/:room", destination: "https://www.whereby.com/:room", permanent: false },
+    ];
+  },
+};
+
+module.exports = nextConfig;
+
